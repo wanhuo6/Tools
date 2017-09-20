@@ -1,4 +1,4 @@
-package com.ahuo.util.imageloader;
+package com.ahuo.tool.imageloader;
 
 import android.content.Context;
 import android.content.res.Resources;

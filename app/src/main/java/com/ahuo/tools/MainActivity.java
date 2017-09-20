@@ -3,7 +3,7 @@ package com.ahuo.tools;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.ahuo.util.imageloader.GlideLoaderUtil;
+import com.ahuo.tool.imageloader.GlideLoaderUtil;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.ahuo.util;
+package com.ahuo.tool;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
