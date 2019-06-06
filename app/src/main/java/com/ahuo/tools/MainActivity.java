@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        GlideLoaderUtil.loadFullWidthImage(this,"",1,new ImageView(this));
+        ImageView imageView=findViewById(R.id.ivPic);
+        GlideLoaderUtil.loadNormalImage(this,"https://i1.whymtj.com/uploads/tu/201905/9999/c0a02826ba.jpg",-1,imageView);
     }
 }
