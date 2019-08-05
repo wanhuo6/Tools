@@ -13,6 +13,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 
 import static com.bumptech.glide.Glide.with;
@@ -55,7 +56,10 @@ public class GlideLoaderUtil {
                 layoutParams.height = (int) (height / width_rate);
                 iv.setLayoutParams(layoutParams);
                // iv.setImageBitmap(bitmap);
-                Glide.with(mContext).load(bitmap).into(iv);
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                byte[] bytes=baos.toByteArray();
+                Glide.with(mContext).load(bytes).into(iv);
             }
 
             @Override
