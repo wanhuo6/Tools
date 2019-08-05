@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.ahuo.tool.R;
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
@@ -53,7 +54,8 @@ public class GlideLoaderUtil {
                 ViewGroup.LayoutParams layoutParams = iv.getLayoutParams();
                 layoutParams.height = (int) (height / width_rate);
                 iv.setLayoutParams(layoutParams);
-                iv.setImageBitmap(bitmap);
+               // iv.setImageBitmap(bitmap);
+                Glide.with(mContext).load(bitmap).into(iv);
             }
 
             @Override
